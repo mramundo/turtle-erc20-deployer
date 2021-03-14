@@ -7,8 +7,8 @@ const Input = ({ label, field, type, span, width, mobileWidth }) => {
                 {label}
             </label>
             <input
-                className={`px-4 py-2 block sm:w-${width ?? 'full'} w-${
-                    mobileWidth ?? 'full'
+                className={`px-4 py-2 block width-full ${width ? 'sm:w-' + width : 'width-full'} ${
+                    mobileWidth ? 'w-' + mobileWidth : 'width-full'
                 } rounded-md border focus:outline-none bg-white border-gray-300 hover:border-green-600`}
                 type={type}
                 name={field}

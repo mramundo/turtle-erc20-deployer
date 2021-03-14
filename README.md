@@ -1,5 +1,7 @@
 # turtle-erc20-deployer
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/792fe039-41a3-48c6-bae0-38b5c9701468/deploy-status)](https://app.netlify.com/sites/turtle-erc20-deployer/deploys)
+
 turtle-erc20-deployer aim to simplify the creation process of an ERC-20, giving to everyone the chance to test the technology without having the initial knowledge to do that at low level.
 
 ## Scripts

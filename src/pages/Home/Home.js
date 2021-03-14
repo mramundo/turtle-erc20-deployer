@@ -9,10 +9,10 @@ import Button from '../../components/Button'
 
 const Home = () => {
     const formContent = (
-        <div className="grid grid-cols-12">
-            <Input label={'Name'} field={'name'} type={'text'} span={12} width={'1/2'} mobileWidth={'full'} />
-            <Input label={'Symbol'} field={'symbol'} type={'text'} span={12} width={'1/2'} mobileWidth={'full'} />
-            <Input label={'Decimals'} field={'decimals'} type={'number'} span={12} width={'1/2'} mobileWidth={'full'} />
+        <div className="grid">
+            <Input label={'Name'} field={'name'} type={'text'} span={12} />
+            <Input label={'Symbol'} field={'symbol'} type={'text'} span={12} />
+            <Input label={'Decimals'} field={'decimals'} type={'number'} span={12} />
             <Button text={'Deploy'} additionalClasses="submit-form mb-4"></Button>
         </div>
     )

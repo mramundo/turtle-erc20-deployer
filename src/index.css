@@ -16,4 +16,8 @@
     .logo-emoji {
         font-size: xx-large;
     }
+
+    .width-full {
+        width: 100% !important;
+    }
 }
