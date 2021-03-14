@@ -1,6 +1,6 @@
 # turtle-erc20-deployer
 
-turtle-erc20-deployer is a base tailwindcss react app used to start a new web3 enabled project.
+turtle-erc20-deployer aim to simplify the creation process of an ERC-20, giving to everyone the chance to test the technology without having the initial knowledge to do that at low level.
 
 ## Scripts
 
