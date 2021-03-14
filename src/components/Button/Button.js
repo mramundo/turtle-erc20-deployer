@@ -5,7 +5,7 @@ const Button = ({ text, additionalClasses, onClickHandler }) => {
     return (
         <button
             className={
-                'inline-flex items-center px-4 py-2 border border-transparent rounded-full shadow-sm text-sm font-medium text-white focus:outline-none bg-green-600 hover:bg-green-700 ' +
+                'inline-flex items-center px-4 py-2 border border-transparent rounded-full shadow-sm text-white focus:outline-none bg-green-600 hover:bg-green-700 ' +
                 (additionalClasses ?? '')
             }
             onClick={onClickHandler ?? onClickDefaultHandler}
