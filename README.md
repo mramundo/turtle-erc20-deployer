@@ -47,3 +47,8 @@ List of supported web3 providers:
 
 -   [x] Metamask
 -   [ ] WalletConnect
+
+## Netlify
+
+Every commit pushed on branch `master` results in a CI Netlify deploy.\
+You can browse the deployed version on [turtle-erc20-deployer.netlify.app](https://turtle-erc20-deployer.netlify.app).
