@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: Roboto Mono;
+        font-weight: 400;
+        src: url(./resources/fonts/roboto-mono/RobotoMono-VariableFont_wght.ttf) format('tff');
+    }
+
+    * {
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    .logo-emoji {
+        font-size: xx-large;
+    }
+}
