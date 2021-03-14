@@ -1,6 +1,6 @@
-# turtle-web3-react-starter
+# turtle-erc20-deployer
 
-turtle-web3-react-starter is a base tailwindcss react app used to start a new web3 enabled project.
+turtle-erc20-deployer is a base tailwindcss react app used to start a new web3 enabled project.
 
 ## Scripts
 

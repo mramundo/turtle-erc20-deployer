@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = ({ action, method, content }) => {
     return (
-        <form action={action} method={method ?? 'GET'}>
+        <form action={action ?? '#'} method={method ?? 'GET'}>
             {content}
         </form>
     )

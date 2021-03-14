@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Input = ({ label, field, type, span, width }) => {
+const Input = ({ label, field, type, span, width, mobileWidth }) => {
     return (
-        <div className={`col-span-${span ?? 12}`}>
+        <div className={`col-span-${span ?? 12} mb-4`}>
             <label className="block" htmlFor={field}>
                 {label}
             </label>
             <input
-                className={`px-2 py-1 block w-${
-                    width ?? 'full'
+                className={`px-4 py-2 block sm:w-${width ?? 'full'} w-${
+                    mobileWidth ?? 'full'
                 } rounded-md border focus:outline-none bg-white border-gray-300 hover:border-green-600`}
                 type={type}
                 name={field}

@@ -8,7 +8,7 @@ import AppRouter from '../AppRouter'
 const App = () => {
     return (
         <Web3ReactProvider getLibrary={getWeb3Library}>
-            <div className="app h-screen bg-white text-black">
+            <div className="app">
                 <script dangerouslySetInnerHTML={{ __html: nightwind.init() }} />
                 <HashRouter>
                     <AppRouter />

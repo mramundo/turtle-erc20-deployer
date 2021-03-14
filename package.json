@@ -1,5 +1,5 @@
 {
-    "name": "turtle-web3-react-starter",
+    "name": "turtle-erc20-deployer",
     "version": "0.1.0",
     "private": true,
     "dependencies": {

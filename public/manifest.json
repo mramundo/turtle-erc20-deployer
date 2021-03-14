@@ -1,6 +1,6 @@
 {
-    "short_name": "turtle-web3-react-starter",
-    "name": "turtle-web3-react-starter",
+    "short_name": "turtle-erc20-deployer",
+    "name": "turtle-erc20-deployer",
     "icons": [
         {
             "src": "favicon.png",
