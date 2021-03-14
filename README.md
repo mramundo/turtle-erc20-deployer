@@ -41,7 +41,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Web3 Supported Providers
 
-List of supported Web3 providers:
+List of supported web3 providers:
 
 -   [x] Metamask
 -   [ ] WalletConnect
