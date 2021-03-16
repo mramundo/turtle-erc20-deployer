@@ -32,6 +32,15 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run serve`
+
+Serve the production build created in `build` folder.\
+Your app is ready to be tested in production mode!
+
+### `npm run build-and-serve`
+
+Builds and serve the app for production using the `build` folder.
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
@@ -46,8 +55,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 List of supported web3 providers:
 
--   [x] Metamask
--   [ ] WalletConnect
+-   [x] Metamask (Injected)
+-   [x] WalletConnect (Mobile)
 
 ## Netlify
 
