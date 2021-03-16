@@ -1,12 +1,17 @@
 import React from 'react'
 import { useWeb3React } from '@web3-react/core'
+import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { web3ConnectorWalletConnect, shortenEthAddress } from '../../utils/web3Utils'
 import Button from '../Button'
 
 const MobileWeb3Connect = () => {
-    const { account, activate, deactivate, active } = useWeb3React()
+    const { account, activate, deactivate, active, connector } = useWeb3React()
     const connectWeb3 = () => {
         if (!active) {
+            if (connector instanceof WalletConnectConnector) {
+                connector.walletConnectProvider = undefined
+            }
+
             activate(web3ConnectorWalletConnect)
         } else {
             deactivate()
