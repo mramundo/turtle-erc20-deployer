@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useWeb3React } from '@web3-react/core'
 import { web3ConnectorInjected, shortenEthAddress } from '../../utils/web3Utils'
 import Button from '../Button'
-import LoadingDots from '../LoadingDots'
+import LoadingLine from '../LoadingLine'
 
 const Web3Connect = () => {
     const { connector, account, activate, deactivate, active } = useWeb3React()
@@ -26,7 +26,7 @@ const Web3Connect = () => {
     const text = active ? (
         shortenEthAddress(account)
     ) : activatingConnector === web3ConnectorInjected ? (
-        <LoadingDots />
+        <LoadingLine />
     ) : (
         'web3'
     )

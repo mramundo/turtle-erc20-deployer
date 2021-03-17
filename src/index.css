@@ -23,7 +23,7 @@
 
     .loading-dots:after {
         content: '.';
-        animation: ellipsis 1.25s infinite;
+        animation: ellipsis 1s infinite;
     }
 
     @keyframes ellipsis {
@@ -35,6 +35,26 @@
         }
         66% {
             content: '...';
+        }
+    }
+
+    .loading-line:after {
+        content: '-';
+        animation: line 0.25s infinite;
+    }
+
+    @keyframes line {
+        0% {
+            content: '-';
+        }
+        25% {
+            content: '\\';
+        }
+        50% {
+            content: '|';
+        }
+        75% {
+            content: '/';
         }
     }
 }

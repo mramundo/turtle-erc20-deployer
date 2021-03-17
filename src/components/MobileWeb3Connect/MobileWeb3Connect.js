@@ -3,7 +3,7 @@ import { useWeb3React } from '@web3-react/core'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { web3ConnectorWalletConnect, shortenEthAddress } from '../../utils/web3Utils'
 import Button from '../Button'
-import LoadingDots from '../LoadingDots'
+import LoadingLine from '../LoadingLine'
 
 const MobileWeb3Connect = () => {
     const { connector, account, activate, deactivate, active } = useWeb3React()
@@ -31,7 +31,7 @@ const MobileWeb3Connect = () => {
     const text = active ? (
         shortenEthAddress(account)
     ) : activatingConnector === web3ConnectorWalletConnect ? (
-        <LoadingDots />
+        <LoadingLine />
     ) : (
         'web3'
     )
