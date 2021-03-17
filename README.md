@@ -64,7 +64,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 List of supported web3 providers:
 
 -   [x] Metamask (Injected)
--   [x] WalletConnect (Mobile)
+-   [x] WalletConnect
 
 ## Netlify
 

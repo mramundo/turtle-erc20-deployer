@@ -2,7 +2,7 @@ import React from 'react'
 import MenuLogo from '../MenuLogo'
 import MenuItem from '../MenuItem'
 import DarkModeToggle from '../DarkModeToggle'
-import Web3Connect from '../Web3Connect'
+import Web3ModalConnect from '../Web3ModalConnect'
 
 const Menu = ({ menuItems }) => {
     return (
@@ -23,7 +23,7 @@ const Menu = ({ menuItems }) => {
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <div className="hidden sm:block sm:ml-3">
-                        <Web3Connect />
+                        <Web3ModalConnect />
                     </div>
                     <div className="hidden sm:block sm:ml-3">
                         <DarkModeToggle />

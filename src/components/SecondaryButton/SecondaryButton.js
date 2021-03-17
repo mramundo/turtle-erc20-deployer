@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SecondaryButton = ({ text, additionalClasses, onClickHandler }) => {
+const SecondaryButton = ({ text, disabled, additionalClasses, onClickHandler }) => {
     const onClickDefaultHandler = () => {}
 
     return (
@@ -9,6 +9,7 @@ const SecondaryButton = ({ text, additionalClasses, onClickHandler }) => {
                 'items-center px-4 py-2 border border-gray-300 w-min rounded-full shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none ' +
                 (additionalClasses ?? '')
             }
+            disabled={disabled ?? false}
             onClick={onClickHandler ?? onClickDefaultHandler}
         >
             {text}

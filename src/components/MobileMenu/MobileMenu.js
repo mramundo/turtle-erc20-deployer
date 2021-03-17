@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import MobileMenuLink from '../MobileMenuLink'
 import MobileMenuItem from '../MobileMenuItem'
-import MobileWeb3Connect from '../MobileWeb3Connect'
+import Web3ModalConnect from '../Web3ModalConnect'
 import DarkModeToggle from '../DarkModeToggle'
 
 const MobileMenu = ({ menuItems }) => {
@@ -25,7 +25,7 @@ const MobileMenu = ({ menuItems }) => {
             {mobileMenuOpen && (
                 <div>
                     <div className="px-2 pt-2 pb-3 space-y-1 flex justify-center">
-                        <MobileWeb3Connect />
+                        <Web3ModalConnect />
                     </div>
                     <div className="px-2 pt-2 pb-3 space-y-1 flex justify-center">
                         <DarkModeToggle />

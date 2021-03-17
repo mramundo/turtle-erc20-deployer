@@ -19,6 +19,22 @@ export const web3ConnectorWalletConnect = new WalletConnectConnector({
     pollingInterval: 12000,
 })
 
+export const web3Providers = [
+    {
+        code: 'injected',
+        label: 'Metamask',
+        provider: web3ConnectorInjected,
+        connector: InjectedConnector,
+        desktop: true,
+    },
+    {
+        code: 'wallet-connect',
+        label: 'WalletConnect',
+        provider: web3ConnectorWalletConnect,
+        connector: WalletConnectConnector,
+    },
+]
+
 export const getWeb3Library = (provider) => {
     const library = new Web3Provider(provider)
     library.pollingInterval = 12000
