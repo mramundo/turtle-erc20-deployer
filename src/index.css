@@ -21,7 +21,7 @@
         width: 100% !important;
     }
 
-    .dots:after {
+    .loading-dots:after {
         content: '.';
         animation: ellipsis 1.25s infinite;
     }
