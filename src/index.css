@@ -22,10 +22,10 @@
     }
 
     .dots:after {
-        content: ".";
+        content: '.';
         animation: ellipsis 1.25s infinite;
     }
-      
+
     @keyframes ellipsis {
         0% {
             content: '.';
