@@ -35,11 +35,19 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run serve`
 
 Serve the production build created in `build` folder.\
+Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+
+The page will not reload if you make edits as you are serving a static pre builded folder.\
 Your app is ready to be tested in production mode!
 
 ### `npm run build-and-serve`
 
-Builds and serve the app for production using the `build` folder.
+Shortand for the `build` and `serve` commands.\
+Builds and serve the app for production using the `build` folder.\
+Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+
+The page will not reload if you make edits as you are serving a static pre builded folder.\
+Your app is ready to be tested in production mode!
 
 ### `npm run eject`
 
