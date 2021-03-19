@@ -46,13 +46,12 @@ const Web3ModalConnect = () => {
                         activate(web3Provider.provider)
                     }
                 }
-
                 const buttonProperties = {
                     key: web3Provider.code,
                     text: activatingProvider ? <LoadingLine /> : web3Provider.label,
                     additionalClasses: `width-full mb-3 ${
                         web3Provider.desktop && 'hidden sm:block md:block lg:block xl:block 2xl:block'
-                    } disabled:opacity-50 connector-${web3Provider.code}`,
+                    } connector-${web3Provider.code}`,
                     disabled: active && activeConnector && activeConnector !== web3Provider.provider,
                     onClickHandler: connectWeb3,
                 }

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useWeb3React } from '@web3-react/core'
 import Page from '../../components/Page'
 import Title from '../../components/Title'
 import SubTitle from '../../components/SubTitle'
@@ -8,12 +9,55 @@ import Input from '../../components/Input'
 import Button from '../../components/Button'
 
 const Home = () => {
+    const { account } = useWeb3React()
+
+    const [name, setName] = useState('')
+    const [symbol, setSymbol] = useState('')
+    const [decimals, setDecimals] = useState('')
+
     const formContent = (
         <div className="grid">
-            <Input label={'Name'} field={'name'} type={'text'} span={12} />
-            <Input label={'Symbol'} field={'symbol'} type={'text'} span={12} />
-            <Input label={'Decimals'} field={'decimals'} type={'number'} span={12} />
-            <Button text={'Deploy'} additionalClasses="submit-form mb-4"></Button>
+            <Input
+                label={'Name'}
+                field={'name'}
+                type={'text'}
+                value={name}
+                onChangeHandler={(event) => {
+                    setName(event.target.value)
+                }}
+                span={12}
+            />
+            <Input
+                label={'Symbol'}
+                field={'symbol'}
+                type={'text'}
+                value={symbol}
+                onChangeHandler={(event) => {
+                    setSymbol(event.target.value)
+                }}
+                span={12}
+            />
+            <Input
+                label={'Decimals'}
+                field={'decimals'}
+                type={'number'}
+                value={decimals}
+                onChangeHandler={(event) => {
+                    setDecimals(event.target.value)
+                }}
+                span={12}
+            />
+
+            <Button
+                text={'Deploy'}
+                additionalClasses="submit-form mb-4"
+                disabled={!account}
+                onClickHandler={() => {
+                    console.log(`name: ${name}`)
+                    console.log(`symbol: ${symbol}`)
+                    console.log(`decimals: ${decimals}`)
+                }}
+            />
         </div>
     )
     const content = (
@@ -40,7 +84,7 @@ const Home = () => {
                 }
             />
             <SubTitle text={'# Form'}></SubTitle>
-            <Form action={'#'} method={'GET'} content={formContent} />
+            <Form content={formContent} />
         </div>
     )
 
