@@ -14,6 +14,7 @@ const Home = () => {
     const [name, setName] = useState('')
     const [symbol, setSymbol] = useState('')
     const [decimals, setDecimals] = useState('')
+    const formValid = !!name && !!symbol && !!decimals
 
     const formContent = (
         <div className="grid">
@@ -22,6 +23,7 @@ const Home = () => {
                 field={'name'}
                 type={'text'}
                 value={name}
+                required={true}
                 onChangeHandler={(event) => {
                     setName(event.target.value)
                 }}
@@ -32,6 +34,7 @@ const Home = () => {
                 field={'symbol'}
                 type={'text'}
                 value={symbol}
+                required={true}
                 onChangeHandler={(event) => {
                     setSymbol(event.target.value)
                 }}
@@ -42,20 +45,22 @@ const Home = () => {
                 field={'decimals'}
                 type={'number'}
                 value={decimals}
+                required={true}
                 onChangeHandler={(event) => {
                     setDecimals(event.target.value)
                 }}
                 span={12}
             />
-
             <Button
                 text={'Deploy'}
                 additionalClasses="submit-form mb-4"
-                disabled={!account}
+                disabled={!account || !formValid}
                 onClickHandler={() => {
-                    console.log(`name: ${name}`)
-                    console.log(`symbol: ${symbol}`)
-                    console.log(`decimals: ${decimals}`)
+                    if (formValid) {
+                        console.log(`name: ${name}`)
+                        console.log(`symbol: ${symbol}`)
+                        console.log(`decimals: ${decimals}`)
+                    }
                 }}
             />
         </div>

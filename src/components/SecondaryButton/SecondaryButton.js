@@ -6,7 +6,7 @@ const SecondaryButton = ({ text, disabled, additionalClasses, onClickHandler }) 
     return (
         <button
             className={
-                'items-center px-4 py-2 border border-gray-300 w-min rounded-full shadow-sm disabled:opacity-50 text-gray-700 bg-white hover:bg-gray-50 focus:outline-none ' +
+                'items-center px-4 py-2 border border-gray-300 w-min rounded-full shadow-sm disabled:opacity-50 disabled:cursor-not-allowed text-gray-700 bg-white hover:bg-gray-50 focus:outline-none ' +
                 (additionalClasses ?? '')
             }
             disabled={disabled ?? false}
