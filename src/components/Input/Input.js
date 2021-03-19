@@ -4,6 +4,7 @@ const Input = ({
     label,
     field,
     type,
+    placeholder,
     value,
     required,
     span,
@@ -29,6 +30,7 @@ const Input = ({
                 id={field}
                 name={field}
                 type={type}
+                placeholder={placeholder}
                 value={value}
                 onChange={onChangeHandler ?? onChangeDefaultHandler}
                 onBlur={onBlurHandler ?? onValidateDefaultHandler}

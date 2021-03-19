@@ -13,7 +13,7 @@ const Home = () => {
 
     const [name, setName] = useState('')
     const [symbol, setSymbol] = useState('')
-    const [decimals, setDecimals] = useState('')
+    const [decimals, setDecimals] = useState('18')
     const formValid = !!name && !!symbol && !!decimals
 
     const formContent = (
@@ -22,6 +22,7 @@ const Home = () => {
                 label={'Name'}
                 field={'name'}
                 type={'text'}
+                placeholder={'Type the token name'}
                 value={name}
                 required={true}
                 onChangeHandler={(event) => {
@@ -33,6 +34,7 @@ const Home = () => {
                 label={'Symbol'}
                 field={'symbol'}
                 type={'text'}
+                placeholder={'Type the token symbol'}
                 value={symbol}
                 required={true}
                 onChangeHandler={(event) => {
@@ -44,6 +46,7 @@ const Home = () => {
                 label={'Decimals'}
                 field={'decimals'}
                 type={'number'}
+                placeholder={'Type the token decimals'}
                 value={decimals}
                 required={true}
                 onChangeHandler={(event) => {
@@ -56,11 +59,9 @@ const Home = () => {
                 additionalClasses="submit-form mb-4"
                 disabled={!account || !formValid}
                 onClickHandler={() => {
-                    if (formValid) {
-                        console.log(`name: ${name}`)
-                        console.log(`symbol: ${symbol}`)
-                        console.log(`decimals: ${decimals}`)
-                    }
+                    console.log(`name: ${name}`)
+                    console.log(`symbol: ${symbol}`)
+                    console.log(`decimals: ${decimals}`)
                 }}
             />
         </div>
