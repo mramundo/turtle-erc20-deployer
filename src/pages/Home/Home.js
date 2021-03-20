@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useWeb3React } from '@web3-react/core'
+import { useToast } from '../../hooks/useToast'
 import Page from '../../components/Page'
 import Title from '../../components/Title'
 import SubTitle from '../../components/SubTitle'
@@ -10,9 +11,10 @@ import Button from '../../components/Button'
 
 const Home = () => {
     const { account } = useWeb3React()
+    const { toast } = useToast()
 
-    const [name, setName] = useState('')
-    const [symbol, setSymbol] = useState('')
+    const [name, setName] = useState('Token')
+    const [symbol, setSymbol] = useState('TKN')
     const [decimals, setDecimals] = useState('18')
     const formValid = !!name && !!symbol && !!decimals
 
@@ -58,11 +60,7 @@ const Home = () => {
                 text={'Deploy'}
                 additionalClasses="submit-form mb-4"
                 disabled={!account || !formValid}
-                onClickHandler={() => {
-                    console.log(`name: ${name}`)
-                    console.log(`symbol: ${symbol}`)
-                    console.log(`decimals: ${decimals}`)
-                }}
+                onClickHandler={() => toast.success(`Token ${name} (${symbol}) deployed succesfully!`)}
             />
         </div>
     )
