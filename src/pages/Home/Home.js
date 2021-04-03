@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { useWeb3React } from '@web3-react/core'
+import { parseUnits } from '@ethersproject/units'
+import { BigNumber } from '@ethersproject/bignumber'
 import { useToast } from '../../hooks/useToast'
+import { deployContract } from '../../utils/deployContract'
+import { abi, bytecode } from '../../contracts/abi/Token.json'
 import Page from '../../components/Page'
 import Title from '../../components/Title'
 import SubTitle from '../../components/SubTitle'
@@ -10,13 +14,14 @@ import Input from '../../components/Input'
 import Button from '../../components/Button'
 
 const Home = () => {
-    const { account } = useWeb3React()
+    const { account, library } = useWeb3React()
     const { toast } = useToast()
 
     const [name, setName] = useState('Token')
     const [symbol, setSymbol] = useState('TKN')
     const [decimals, setDecimals] = useState('18')
     const [supply, setSupply] = useState('1000000')
+
     const formValid = !!name && !!symbol && !!decimals && !!supply
 
     const formContent = (
@@ -73,7 +78,19 @@ const Home = () => {
                 text={'Deploy'}
                 additionalClasses="submit-form mb-4"
                 disabled={!account || !formValid}
-                onClickHandler={() => toast.success(`Token ${name} (${symbol}) deployed succesfully!`)}
+                onClickHandler={async () => {
+                    try {
+                        const uintDecimals = BigNumber.from(decimals)
+                        const uintSupply = parseUnits(supply, uintDecimals)
+
+                        await deployContract(library, account, abi, bytecode, [name, symbol, uintDecimals, uintSupply])
+
+                        toast.success(`Token ${symbol} deployed succesfully!`)
+                    } catch (error) {
+                        toast.error(`Error deploying token ${symbol}`)
+                        console.error(error)
+                    }
+                }}
             />
         </div>
     )
