@@ -20,7 +20,8 @@
         "test": "craco test",
         "eject": "react-scripts eject",
         "serve": "serve -s build -l 4000",
-        "build-and-serve": "craco build && serve -s build -l 4000"
+        "build-and-serve": "craco build && serve -s build -l 4000",
+        "remixd": "remixd -s . --remix-ide https://remix.ethereum.org"
     },
     "eslintConfig": {
         "extends": [
@@ -42,6 +43,8 @@
     },
     "devDependencies": {
         "@ethersproject/providers": "^5.0.24",
+        "@openzeppelin/contracts": "^4.0.0",
+        "@remix-project/remixd": "^0.3.4",
         "@tailwindcss/postcss7-compat": "^2.0.3",
         "@web3-react/core": "^6.1.9",
         "@web3-react/injected-connector": "^6.0.7",
