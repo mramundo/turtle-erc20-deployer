@@ -21,6 +21,8 @@
         "eject": "react-scripts eject",
         "serve": "serve -s build -l 4000",
         "build-and-serve": "craco build && serve -s build -l 4000",
+        "build-contracts": "waffle",
+        "flatten-contracts": "npx waffle flatten",
         "remixd": "remixd -s . --remix-ide https://remix.ethereum.org"
     },
     "eslintConfig": {
@@ -42,7 +44,6 @@
         ]
     },
     "devDependencies": {
-        "@ethersproject/providers": "^5.0.24",
         "@openzeppelin/contracts": "^4.0.0",
         "@remix-project/remixd": "^0.3.4",
         "@tailwindcss/postcss7-compat": "^2.0.3",
@@ -51,6 +52,8 @@
         "@web3-react/walletconnect-connector": "^6.1.9",
         "@web3-react/walletlink-connector": "^6.1.9",
         "autoprefixer": "^9.8.6",
+        "ethereum-waffle": "^3.3.0",
+        "ethers": "^5.1.0",
         "postcss": "^7.0.35",
         "prettier": "2.2.1",
         "serve": "^11.3.2",
