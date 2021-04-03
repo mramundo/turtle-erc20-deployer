@@ -16,7 +16,8 @@ const Home = () => {
     const [name, setName] = useState('Token')
     const [symbol, setSymbol] = useState('TKN')
     const [decimals, setDecimals] = useState('18')
-    const formValid = !!name && !!symbol && !!decimals
+    const [supply, setSupply] = useState('1000000')
+    const formValid = !!name && !!symbol && !!decimals && !!supply
 
     const formContent = (
         <div className="grid">
@@ -53,6 +54,18 @@ const Home = () => {
                 required={true}
                 onChangeHandler={(event) => {
                     setDecimals(event.target.value)
+                }}
+                span={12}
+            />
+            <Input
+                label={'Supply'}
+                field={'supply'}
+                type={'number'}
+                placeholder={'Type the token supply'}
+                value={supply}
+                required={true}
+                onChangeHandler={(event) => {
+                    setSupply(event.target.value)
                 }}
                 span={12}
             />
