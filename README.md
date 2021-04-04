@@ -96,3 +96,8 @@ List of supported web3 providers:
 
 Every commit pushed on branch `master` results in a Netlify CI deploy.\
 You can browse the deployed version on [turtle-erc20-deployer.netlify.app](https://turtle-erc20-deployer.netlify.app).
+
+## IPFS
+
+Every commit pushed on branch `master` create a Github release and a PIN on IPFS through Pinata.\
+You can check the [latest release](https://github.com/mramundo/turtle-erc20-deployer/releases) changelog for all IPFS gateways links.
