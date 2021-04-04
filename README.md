@@ -52,6 +52,28 @@ Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 The page will not reload if you make edits as you are serving a static pre builded folder.\
 Your app is ready to be tested in production mode!
 
+### `npm run build-contracts`
+
+Build smart contracts using waffle.\
+The builded contracts are placed in the `abi` folder under `src/contracts`.\
+Build path can be modified changing `outputDirectory` parameter in waffle configuration file.
+
+### `npm run test-contracts`
+
+Launches the smart contracts tests.\
+Tests are written using mocha.
+
+### `npm run flatten-contracts`
+
+Flatten smart contracts using waffle.\
+The flattened contracts are placed in the `flatten` folder under `src/contracts`.\
+Flatten path can be modified changing `flattenOutputDirectory` parameter in waffle configuration file.
+
+### `npm run remixd`
+
+Share the current directory using a web socket connection between the local computer and Remix IDE.\
+The directory is shared with the `remixd` command.
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
