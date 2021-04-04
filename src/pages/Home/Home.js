@@ -4,7 +4,9 @@ import { parseUnits } from '@ethersproject/units'
 import { BigNumber } from '@ethersproject/bignumber'
 import { useToast } from '../../hooks/useToast'
 import { deployContract } from '../../utils/deployContract'
+import { etherscanLink, etherscanTypes, shortenEthAddress } from '../../utils/web3Utils'
 import { abi, bytecode } from '../../contracts/abi/Token.json'
+import CustomExternalLink from '../../components/CustomExternalLink'
 import Page from '../../components/Page'
 import Title from '../../components/Title'
 import SubTitle from '../../components/SubTitle'
@@ -14,7 +16,7 @@ import Input from '../../components/Input'
 import Button from '../../components/Button'
 
 const Home = () => {
-    const { account, library } = useWeb3React()
+    const { account, library, chainId } = useWeb3React()
     const { toast } = useToast()
 
     const [name, setName] = useState('Token')
@@ -82,10 +84,23 @@ const Home = () => {
                     try {
                         const uintDecimals = BigNumber.from(decimals)
                         const uintSupply = parseUnits(supply, uintDecimals)
+                        const { contract } = await deployContract(library, account, abi, bytecode, [
+                            name,
+                            symbol,
+                            uintDecimals,
+                            uintSupply,
+                        ])
+                        const link = etherscanLink(chainId, contract.address, etherscanTypes.TOKEN)
+                        const address = shortenEthAddress(contract.address)
+                        const message = (
+                            <>
+                                {`Token ${symbol} deployed at address `}
+                                <CustomExternalLink text={address} href={link} />
+                                {`!`}
+                            </>
+                        )
 
-                        await deployContract(library, account, abi, bytecode, [name, symbol, uintDecimals, uintSupply])
-
-                        toast.success(`Token ${symbol} deployed succesfully!`)
+                        toast.success(message)
                     } catch (error) {
                         toast.error(`Error deploying token ${symbol}`)
                         console.error(error)

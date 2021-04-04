@@ -3,6 +3,21 @@ import { InjectedConnector } from '@web3-react/injected-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 
+export const etherscanPrefixes = {
+    1: '',
+    3: 'ropsten.',
+    4: 'rinkeby.',
+    5: 'goerli.',
+    42: 'kovan.',
+}
+
+export const etherscanTypes = {
+    TRANSACTION: 'transaction',
+    TOKEN: 'token',
+    ADDRESS: 'address',
+    BLOCK: 'block',
+}
+
 export const web3InjectedChainId = [1, 3, 4, 5, 42]
 
 export const web3RpcChainId = {
@@ -59,4 +74,24 @@ export const getWeb3Library = (provider) => {
 export const shortenEthAddress = (address) => {
     address = address ? address.slice(0, 6) + '...' + address?.slice(38, 42) : undefined
     return address
+}
+
+export const etherscanLink = (chainId, data, type) => {
+    const prefix = `https://${etherscanPrefixes[chainId] ?? etherscanPrefixes[1]}etherscan.io`
+
+    switch (type) {
+        case etherscanTypes.TRANSACTION: {
+            return `${prefix}/tx/${data}`
+        }
+        case etherscanTypes.TOKEN: {
+            return `${prefix}/token/${data}`
+        }
+        case etherscanTypes.BLOCK: {
+            return `${prefix}/block/${data}`
+        }
+        case etherscanTypes.ADDRESS:
+        default: {
+            return `${prefix}/address/${data}`
+        }
+    }
 }
