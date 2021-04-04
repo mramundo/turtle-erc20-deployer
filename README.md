@@ -1,7 +1,10 @@
 # turtle-erc20-deployer
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/792fe039-41a3-48c6-bae0-38b5c9701468/deploy-status)](https://app.netlify.com/sites/turtle-erc20-deployer/deploys)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![react](./src/resources/badges/badge-react.svg)](https://reactjs.org/)
+[![mocha](./src/resources/badges/badge-mocha.svg)](https://mochajs.org/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![netlify status](https://api.netlify.com/api/v1/badges/792fe039-41a3-48c6-bae0-38b5c9701468/deploy-status)](https://app.netlify.com/sites/turtle-erc20-deployer/deploys)
+[![github: mramundo](https://img.shields.io/github/followers/mramundo?label=Follow&style=social)](https://github.com/mramundo)
 
 turtle-erc20-deployer aim to simplify the creation process of an ERC-20, giving to everyone the chance to test the technology without having the initial knowledge to do that at low level.
 
