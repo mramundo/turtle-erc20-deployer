@@ -12,7 +12,7 @@ turtle-erc20-deployer aim to simplify the creation process of an ERC-20, giving 
 
 In the project directory, you can run:
 
-### `npm run start`
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -20,12 +20,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm run test`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -35,7 +35,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run serve`
+### `yarn serve`
 
 Serve the production build created in `build` folder.\
 Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
@@ -43,7 +43,7 @@ Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 The page will not reload if you make edits as you are serving a static pre builded folder.\
 Your app is ready to be tested in production mode!
 
-### `npm run build-and-serve`
+### `yarn build:serve`
 
 Shortand for the `build` and `serve` commands.\
 Builds and serve the app for production using the `build` folder.\
@@ -52,29 +52,29 @@ Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 The page will not reload if you make edits as you are serving a static pre builded folder.\
 Your app is ready to be tested in production mode!
 
-### `npm run build-contracts`
+### `yarn contracts:build`
 
 Build smart contracts using waffle.\
 The builded contracts are placed in the `abi` folder under `src/contracts`.\
 Build path can be modified changing `outputDirectory` parameter in waffle configuration file.
 
-### `npm run test-contracts`
+### `yarn contracts:test`
 
 Launches the smart contracts tests.\
 Tests are written using mocha.
 
-### `npm run flatten-contracts`
+### `yarn contracts:flatten`
 
 Flatten smart contracts using waffle.\
 The flattened contracts are placed in the `flatten` folder under `src/contracts`.\
 Flatten path can be modified changing `flattenOutputDirectory` parameter in waffle configuration file.
 
-### `npm run remixd`
+### `yarn remixd`
 
 Share the current directory using a web socket connection between the local computer and Remix IDE.\
 The directory is shared with the `remixd` command.
 
-### `npm run eject`
+### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
